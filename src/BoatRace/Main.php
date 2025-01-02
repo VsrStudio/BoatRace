@@ -107,7 +107,6 @@ class Main extends PluginBase implements Listener {
 
         $this->updateScoreHud($player, $arena);
 
-        // Otomatis mulai permainan jika jumlah pemain mencukupi
         if (count($this->playersInArena[$arena]) >= $this->arenas[$arena]["maxPlayers"]) {
             $this->startRaceForArena($arena);
         }

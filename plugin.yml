@@ -1,0 +1,29 @@
+name: BoatRace
+version: 1.0.0
+main: BoatRace\Main
+api: 5.0.0
+author: VsrStudio
+description: A plugin for boat races in Minecraft Pocket Edition
+softdepend: [EconomyAPI, ScoreHud]
+commands:
+  joinrace:
+    description: Join a race in a selected arena
+  startrace:
+    description: Start the race in a specific arena
+  racestats:
+    description: View your race win statistics
+  raceui:
+    description: Open the UI to select an arena
+permissions:
+  boatrace.join:
+    description: Permission to join the race
+    default: true
+  boatrace.start:
+    description: Permission to start the race
+    default: op
+  boatrace.stats:
+    description: Permission to view race statistics
+    default: true
+  boatrace.ui:
+    description: Permission to open the race selection UI
+    default: true

@@ -9,6 +9,10 @@ BoatRace is a fun and competitive racing plugin for Minecraft Pocket Edition, wh
 - **Reward System**: Winners receive a monetary reward.
 - **Scoreboard Integration**: Displays race status and player progress.
 - **Customizable Config**: Easily configure arenas and reward money.
+# Dependency
+- EconomyAPI
+- Scorehud
+- FormAPI
 
 ## Commands
 

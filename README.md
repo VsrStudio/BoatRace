@@ -1,4 +1,4 @@
-# BoatRace Plugin for PocketMine-MP
+# BoatRace
 
 BoatRace is a fun and competitive racing plugin for Minecraft Pocket Edition, where players can race in custom arenas using boats. The plugin supports multiple arenas, rewards for winners, and a scoreboard to track player progress.
 

@@ -8,12 +8,16 @@ softdepend: [EconomyAPI, ScoreHud]
 commands:
   joinrace:
     description: Join a race in a selected arena
+    permission: boatrace.join
   startrace:
     description: Start the race in a specific arena
+    permission: boatrace.start
   racestats:
     description: View your race win statistics
+    permission: boatrace.stats
   raceui:
     description: Open the UI to select an arena
+    permission: boatrace.ui
 permissions:
   boatrace.join:
     description: Permission to join the race

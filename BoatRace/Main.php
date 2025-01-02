@@ -46,7 +46,7 @@ class Main extends PluginBase implements Listener {
                 $this->arenas[$arenaName] = [
                     "startPosition" => new Position($data["start"]["x"], $data["start"]["y"], $data["start"]["z"], $world),
                     "finishPosition" => new Position($data["finish"]["x"], $data["finish"]["y"], $data["finish"]["z"], $world),
-                    "maxPlayers" => $data["max_players"] ?? 4 // Default maximum players
+                    "maxPlayers" => $data["max_players"] ?? 4 
                 ];
             } else {
                 $this->getLogger()->warning("World {$data['world']} for arena {$arenaName} not found!");

@@ -15,6 +15,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\block\VanillaBlocks;
 use jojoe77777\FormAPI\SimpleForm;
 use Ifera\ScoreHud\event\PlayerTagUpdateEvent;
+use Ifera\ScoreHud\scoreboard\ScoreTag;
 use Ifera\ScoreHud\ScoreHud;
 
 class Main extends PluginBase implements Listener {
@@ -144,21 +145,22 @@ class Main extends PluginBase implements Listener {
     }
 
     private function updateScoreHud(Player $player, ?string $arena): void {
-        $arenaName = $arena ?? "Tidak ada";
-        $wins = $this->statsConfig->get($player->getName(), 0);
+    $arenaName = $arena ?? "Tidak ada";
+    $wins = $this->statsConfig->get($player->getName(), 0);
 
-        (new PlayerTagUpdateEvent(
-            $player,
-            "boatrace.arena",
-            $arenaName
-        ))->call();
+    $arenaTag = new ScoreTag("boatrace.arena", $arenaName);
+    $winsTag = new ScoreTag("boatrace.wins", (string)$wins);
 
-        (new PlayerTagUpdateEvent(
-            $player,
-            "boatrace.wins",
-            (string)$wins
-        ))->call();
-    }
+    (new PlayerTagUpdateEvent(
+        $player,
+        $arenaTag
+    ))->call();
+
+    (new PlayerTagUpdateEvent(
+        $player,
+        $winsTag
+    ))->call();
+}
 
     public function onPlayerMove(PlayerMoveEvent $event): void {
         $player = $event->getPlayer();

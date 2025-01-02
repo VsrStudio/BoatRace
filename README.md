@@ -1,0 +1,2 @@
+# BoatRace
+boat racing plugin
